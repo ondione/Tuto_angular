@@ -1,0 +1,101 @@
+
+<div [appBackToTop]>
+  <div id="topbar" class="d-flex align-items-center fixed-top" >
+    <div class="container d-flex justify-content-between"></div>
+  </div>
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container-fluid"  [appMenuItems]>
+        <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light shadow fixed-top" >
+            <div class="container"> 
+                <a class="navbar-brand" >
+                  <img class="logo_app" src="" />  
+                </a>
+                <button class="navbar-toggler" type="button" 
+                    data-toggle="collapse" 
+                    data-target="#navbarSupportedContent"   
+                    aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      
+                      <li class="nav-item">
+                        <a class="nav-link scrollto" [routerLink]="['']">Accueil</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link scrollto" [routerLink]="['about']">a propos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link scrollto" [routerLink]="['service']">Service</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link scrollto" [routerLink]="['article']">Articles</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link scrollto"  [routerLink]="['event']">Events</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a class="nav-link scrollto" [routerLink]="['contact']">Contact</a>
+                      </li>
+                    
+                    </ul>
+                </div>
+                <div class="connected-user">
+                  <span class="d-none d-md-block">Connected user</span> 
+                  <img src="assets/avatar.jpg" class="rounded-circle" />
+                </div>
+                <div class="logout">
+                    <a>
+                      <i class="bi bi-power" ></i> Déconnexion
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+  </header>
+
+  <!--aside id="sidebar" class="sidebar"></aside-->
+
+  <main id="main" class="main">
+      <div class="pagetitle">
+        <h1>Navigation with scroll</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Section</li>
+            <li class="breadcrumb-item active">selected section</li>
+          </ol>
+        </nav>
+      </div>
+     
+
+      <section id="home" class="section" #home>
+        <i class="bi bi-arrow-up-short"></i>
+        section 0-1
+        Bienvenue sur la home page
+        Home
+      </section>
+
+      <section id="about" class="section" #about>
+        <i class="bi bi-arrow-up-short"></i>
+        section 0-1
+        first Default added
+      </section>
+    
+      <router-outlet></router-outlet>
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">Pied de page </footer><!-- End Footer -->
+
+    <a class="back-to-top d-flex align-items-center justify-content-center"  #bkt>
+      <i class="bi bi-arrow-up-short"></i>
+    </a>
+</div>
